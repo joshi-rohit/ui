@@ -3,13 +3,13 @@ from ui.state import State
 
 
 def modal() -> rx.Component:
-    """A modal to create a new chat."""
+    """A modal to create a new chat thread."""
     return rx.chakra.modal(
         rx.chakra.modal_overlay(
             rx.chakra.modal_content(
                 rx.chakra.modal_header(
                     rx.chakra.hstack(
-                        rx.chakra.text("Create new chat"),
+                        rx.chakra.text("Create new chat thread"),
                         rx.chakra.icon(
                             tag="close",
                             font_size="sm",

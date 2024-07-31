@@ -4,6 +4,7 @@
 **/*.swp
 **/.DS_Store
 **/.web
+**/.web-old
 **/node_modules/**
 **/package-lock.json
 **/package.json

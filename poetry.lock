@@ -852,6 +852,29 @@ files = [
 ]
 
 [[package]]
+name = "openai"
+version = "1.37.1"
+description = "The official Python library for the openai API"
+optional = false
+python-versions = ">=3.7.1"
+files = [
+    {file = "openai-1.37.1-py3-none-any.whl", hash = "sha256:9a6adda0d6ae8fce02d235c5671c399cfa40d6a281b3628914c7ebf244888ee3"},
+    {file = "openai-1.37.1.tar.gz", hash = "sha256:faf87206785a6b5d9e34555d6a3242482a6852bc802e453e2a891f68ee04ce55"},
+]
+
+[package.dependencies]
+anyio = ">=3.5.0,<5"
+distro = ">=1.7.0,<2"
+httpx = ">=0.23.0,<1"
+pydantic = ">=1.9.0,<3"
+sniffio = "*"
+tqdm = ">4"
+typing-extensions = ">=4.7,<5"
+
+[package.extras]
+datalib = ["numpy (>=1)", "pandas (>=1.2.3)", "pandas-stubs (>=1.1.0.11)"]
+
+[[package]]
 name = "packaging"
 version = "24.1"
 description = "Core utilities for Python packages"
@@ -1124,6 +1147,20 @@ files = [
 six = ">=1.5"
 
 [[package]]
+name = "python-dotenv"
+version = "1.0.1"
+description = "Read key-value pairs from a .env file and set them as environment variables"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "python-dotenv-1.0.1.tar.gz", hash = "sha256:e324ee90a023d808f1959c46bcbc04446a10ced277783dc6ee09987c37ec10ca"},
+    {file = "python_dotenv-1.0.1-py3-none-any.whl", hash = "sha256:f7b63ef50f1b690dddf550d03497b66d609393b40b564ed0d674909a68ebf16a"},
+]
+
+[package.extras]
+cli = ["click (>=5.0)"]
+
+[[package]]
 name = "python-engineio"
 version = "4.9.1"
 description = "Engine.IO server and client for Python"
@@ -1223,13 +1260,13 @@ ocsp = ["cryptography (>=36.0.1)", "pyopenssl (==20.0.1)", "requests (>=2.26.0)"
 
 [[package]]
 name = "reflex"
-version = "0.5.7"
+version = "0.5.8"
 description = "Web apps in pure Python."
 optional = false
 python-versions = "<4.0,>=3.8"
 files = [
-    {file = "reflex-0.5.7-py3-none-any.whl", hash = "sha256:664053a13b416df2cdffbe654cb74d5fb4d9dd258db60d8a8ee0f92a1cabfb9a"},
-    {file = "reflex-0.5.7.tar.gz", hash = "sha256:6c2ed244c053663324ce8565dba1a92e9e73581a38b795234c9e55f2ad08a61a"},
+    {file = "reflex-0.5.8-py3-none-any.whl", hash = "sha256:b1607c2341c56f634ef930a9df7696b970895f681cd56c713769e04826ffef4f"},
+    {file = "reflex-0.5.8.tar.gz", hash = "sha256:1f0f8ebc9f1cf74a6d02356640dceaef5e0c9e9f87e5b212345d7bbd8bce7064"},
 ]
 
 [package.dependencies]
@@ -1266,6 +1303,23 @@ wheel = ">=0.42.0,<1.0"
 wrapt = {version = ">=1.14.0,<2.0", markers = "python_version >= \"3.11\""}
 
 [[package]]
+name = "reflex-clerk"
+version = "1.0.3"
+description = "Reflex custom component library for Clerk, a user management platform"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "reflex_clerk-1.0.3-py3-none-any.whl", hash = "sha256:fbbc606a1d1eda024b069976fb4bef69b6cdbb2bbf34baec48c5aec290e2caa5"},
+    {file = "reflex_clerk-1.0.3.tar.gz", hash = "sha256:1db113d36f2819769c114f5732b27abeb441216ddb85dcdb3c85ca93c89b6449"},
+]
+
+[package.dependencies]
+reflex = ">=0.5.0"
+
+[package.extras]
+dev = ["build", "twine"]
+
+[[package]]
 name = "reflex-hosting-cli"
 version = "0.1.13"
 description = "Reflex Hosting CLI"
@@ -1287,6 +1341,23 @@ rich = ">=13.0.0,<14.0"
 tabulate = ">=0.9.0,<0.10.0"
 typer = ">=0.4.2,<1"
 websockets = ">=10.4"
+
+[[package]]
+name = "reflex-spline"
+version = "0.0.1"
+description = "Reflex custom component spline"
+optional = false
+python-versions = ">=3.8"
+files = [
+    {file = "reflex-spline-0.0.1.tar.gz", hash = "sha256:aea2d8794fac02e38cd77f21599256cdc16c8f0a0c15ea91f6edbe02561fe8d4"},
+    {file = "reflex_spline-0.0.1-py3-none-any.whl", hash = "sha256:cb2ebeb47cf597812a7fbee212d39f7602680c37a670f405ea63cc02f6cb0537"},
+]
+
+[package.dependencies]
+reflex = ">=0.4.2"
+
+[package.extras]
+dev = ["build", "twine"]
 
 [[package]]
 name = "requests"
@@ -1601,6 +1672,26 @@ files = [
     {file = "tomlkit-0.13.0-py3-none-any.whl", hash = "sha256:7075d3042d03b80f603482d69bf0c8f345c2b30e41699fd8883227f89972b264"},
     {file = "tomlkit-0.13.0.tar.gz", hash = "sha256:08ad192699734149f5b97b45f1f18dad7eb1b6d16bc72ad0c2335772650d7b72"},
 ]
+
+[[package]]
+name = "tqdm"
+version = "4.66.4"
+description = "Fast, Extensible Progress Meter"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "tqdm-4.66.4-py3-none-any.whl", hash = "sha256:b75ca56b413b030bc3f00af51fd2c1a1a5eac6a0c1cca83cbb37a5c52abce644"},
+    {file = "tqdm-4.66.4.tar.gz", hash = "sha256:e4d936c9de8727928f3be6079590e97d9abfe8d39a590be678eb5919ffc186bb"},
+]
+
+[package.dependencies]
+colorama = {version = "*", markers = "platform_system == \"Windows\""}
+
+[package.extras]
+dev = ["pytest (>=6)", "pytest-cov", "pytest-timeout", "pytest-xdist"]
+notebook = ["ipywidgets (>=6)"]
+slack = ["slack-sdk"]
+telegram = ["requests"]
 
 [[package]]
 name = "twine"
@@ -2024,4 +2115,4 @@ test = ["big-O", "importlib-resources", "jaraco.functools", "jaraco.itertools", 
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.12"
-content-hash = "8500f4bb29e6c2823b51a70b24e85108b73f2675f90217151ecd5d7c00069d30"
+content-hash = "13ae4e9e287fc7b4a145be6bf4a9a202eb31593d444022362169b5ddce0987dc"

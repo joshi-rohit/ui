@@ -8,19 +8,9 @@ def sidebar_chat(chat: str) -> rx.Component:
         chat: The chat item.
     """
     return  rx.drawer.close(rx.hstack(
-        rx.button(
-            chat, on_click=lambda: State.set_chat(chat), width="80%", variant="surface"
-        ),
-        rx.button(
-            rx.icon(
-                tag="trash",
-                on_click=State.delete_chat,
-                stroke_width=1,
-            ),
-            width="20%",
-            variant="surface",
-            color_scheme="red",
-        ),
+        rx.button(chat, on_click=lambda: State.set_chat(chat), width="80%", variant="surface"),
+        rx.button(rx.icon(tag="trash",on_click=State.delete_chat,stroke_width=1,),
+            width="20%",variant="surface",color_scheme="red",),
         width="100%",
     ))
 
@@ -81,8 +71,8 @@ def navbar():
     return rx.box(
         rx.hstack(
             rx.hstack(
-                rx.avatar(fallback="RC", variant="solid"),
-                rx.heading("Reflex Chat"),
+                rx.avatar(fallback="MC", variant="solid"),
+                rx.heading("MD Chat"),
                 rx.desktop_only(
                     rx.badge(
                     State.current_chat,

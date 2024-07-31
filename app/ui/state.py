@@ -1,6 +1,10 @@
 import os
 import reflex as rx
 from openai import OpenAI
+from dotenv import load_dotenv
+
+
+load_dotenv()
 
 
 # Checking if the API key is set properly
